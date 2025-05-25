@@ -1,4 +1,4 @@
-name: Upload NIfTI Files to Release
+name: Upload Data Files to Release
 
 on:
   workflow_dispatch:
@@ -17,11 +17,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Find NIfTI files
+      - name: List files to upload
         run: |
-          echo "Looking for .nii and .nii.gz files"
-          find . -type f \( -name "*.nii" -o -name "*.nii.gz" \) > nii_files.txt
-          cat nii_files.txt
+          echo "Looking for .nii, .nii.gz, .csv, and .RData files"
+          find . -type f \( -name "*.nii" -o -name "*.nii.gz" -o -name "*.csv" -o -name "*.RData" \) > files_to_upload.txt
+          cat files_to_upload.txt
 
       - name: Upload files to release
         uses: softprops/action-gh-release@v1
@@ -30,5 +30,7 @@ jobs:
           files: |
             **/*.nii
             **/*.nii.gz
+            **/*.csv
+            **/*.RData
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
