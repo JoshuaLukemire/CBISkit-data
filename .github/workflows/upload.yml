@@ -1,0 +1,33 @@
+name: Upload NIfTI Files to Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Find NIfTI files
+        run: |
+          echo "Looking for .nii and .nii.gz files"
+          find . -type f \( -name "*.nii" -o -name "*.nii.gz" \) > nii_files.txt
+          cat nii_files.txt
+
+      - name: Upload files to release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: |
+            **/*.nii
+            **/*.nii.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
