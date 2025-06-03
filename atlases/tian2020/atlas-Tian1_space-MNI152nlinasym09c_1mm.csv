@@ -1,0 +1,17 @@
+node_index,node_label,n_voxel,node_source
+1,HIP-rh,5399,TianScale1
+2,AMY-rh,2922,TianScale1
+3,pTHA-rh,3096,TianScale1
+4,aTHA-rh,6944,TianScale1
+5,NAc-rh,1932,TianScale1
+6,GP-rh,1596,TianScale1
+7,PUT-rh,7659,TianScale1
+8,CAU-rh,3556,TianScale1
+9,HIP-lh,5358,TianScale1
+10,AMY-lh,2980,TianScale1
+11,pTHA-lh,3332,TianScale1
+12,aTHA-lh,7328,TianScale1
+13,NAc-lh,2035,TianScale1
+14,GP-lh,1584,TianScale1
+15,PUT-lh,7551,TianScale1
+16,CAU-lh,3886,TianScale1
