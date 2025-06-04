@@ -1,0 +1,18 @@
+node_index,node_label,n_voxel,node_source
+1,Cerebellum - VisCent,43,Buckner2011
+2,Cerebellum - VisPeri,832,Buckner2011
+3,Cerebellum - SomMotA,14237,Buckner2011
+4,Cerebellum - SomMotB,7251,Buckner2011
+5,Cerebellum - DorsAttnA,454,Buckner2011
+6,Cerebellum - DosAttnB,11195,Buckner2011
+7,Cerebellum - SalVentAttnA,26397,Buckner2011
+8,Cerebellum - SalVentAttnB,15641,Buckner2011
+9,Cerebellum - LimbicB,24074,Buckner2011
+10,Cerebellum - LimbicA,673,Buckner2011
+11,Cerebellum - ContA,1765,Buckner2011
+12,Cerebellum - ContB,16897,Buckner2011
+13,Cerebellum - ContC,24955,Buckner2011
+14,Cerebellum - DefaultA,152,Buckner2011
+15,Cerebellum - DefalutB,2825,Buckner2011
+16,Cerebellum - DefaultC,15548,Buckner2011
+17,Cerebellum - TempPar,17735,Buckner2011
